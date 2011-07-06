@@ -15,7 +15,7 @@ gem 'capistrano'
 gem "rails"
 gem "arel"
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
-gem "will_paginate", "~> 3.0.pre2"
+#gem "will_paginate", "~> 3.0.pre2"
 gem 'haml'
 gem 'acts_as_commentable'
 gem 'mongrel'
