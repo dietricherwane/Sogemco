@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
   def edit
     if new_comer?
-      redirect_to edit_profile_path(current_user), :alert => 'Veuillez compléter votre profil pour continuer.'
+      redirect_to edit_profile_path(current_user), :alert => 'Veuillez completer votre profil pour continuer.'
     else
       @user = current_user
     end
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update_attributes(params[:user])
-      redirect_to navigations_path, :notice => 'Votre profil a été mis à jour.'
+      redirect_to navigations_path, :notice => 'Votre profil a ete mis à jour.'
     else
       render :action => 'edit'
     end

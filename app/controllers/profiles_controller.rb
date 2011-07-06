@@ -31,7 +31,7 @@ class ProfilesController < ApplicationController
     @profile = current_user.profile.new([:profile])
     respond_to do |format|
       if @profile.save
-        format.html { redirect_to (navigations_path, :notice => 'Votre profil a été correctement enregistré.') }
+        format.html { redirect_to (navigations_path, :notice => 'Votre profil a ete correctement enregistre.') }
       else
         format.html { render :action => "new" }
       end
@@ -46,7 +46,7 @@ class ProfilesController < ApplicationController
         unless @fonction.nil?
           @profile.update_attributes(:fonction => @fonction.fonction)
         end
-        format.html { redirect_to navigations_path , :notice => 'Votre profil a été correctement mis à jour.' }
+        format.html { redirect_to navigations_path , :notice => 'Votre profil a ete correctement mis a jour.' }
       else
         format.html { render :action => "edit" }
       end

@@ -51,7 +51,7 @@ class NavigationsController < ApplicationController
     
     respond_to do |format|
       if @navigation.save
-        format.html { redirect_to (navigations_path, :notice => 'Votre navigation a été correctement enrégistrée.') }
+        format.html { redirect_to (navigations_path, :notice => 'Votre navigation a ete correctement enregistree.') }
         format.xml  { render :xml => @navigation, :status => :created, :location => @navigation }
       else
         format.html { render :action => "new" }
@@ -69,7 +69,7 @@ class NavigationsController < ApplicationController
         unless @fonction.nil?
           @navigation.update_attributes(:fonction_occupee => @fonction.fonction)
         end
-        format.html { redirect_to (navigations_path, :notice => 'Votre navigation a été correctement mise à jour.') }
+        format.html { redirect_to (navigations_path, :notice => 'Votre navigation a ete correctement mise a jour.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
