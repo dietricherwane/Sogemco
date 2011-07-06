@@ -33,7 +33,8 @@ class ApplicationController < ActionController::Base
   helper_method :user_logged_in?
 
   def new_comer?
-    (current_user.profile.nom == 'newcomer') && (current_user.statut == 'Utilisateur')
+    #(current_user.profile.nom == 'newcomer') && (current_user.statut == 'Utilisateur')
+    current_user.profile.nom.eql?('newcomer') && current_user.statut.eql?('Utilisateur')
   end
   # Make user_logged_in? available in templates as a helper
   helper_method :new_comer?
