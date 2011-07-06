@@ -18,7 +18,7 @@ gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => '
 #gem "will_paginate", "~> 3.0.pre2"
 gem 'haml'
 gem 'acts_as_commentable'
-gem 'mongrel'
+#gem 'mongrel'
 gem 'rake'
 gem 'rack'
 gem "resource_controller", :git => "git://github.com/BDQ/resource_controller.git"
