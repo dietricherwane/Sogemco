@@ -1,4 +1,7 @@
-source 'http://rubygems.org'
+#source 'http://rubygems.org'
+source :gemcutter
+
+gem 'sinatra', '1.0'
 
 gem 'gherkin'
 gem 'hoptoad_notifier'
