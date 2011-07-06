@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def index
     #@users = User.all
-    @users = User.find_all_by_statut ('Utilisateur')
+    @users = User.find_all_by_statut('Utilisateur')
     @tab_color = true
   end
 
