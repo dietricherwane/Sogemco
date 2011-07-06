@@ -1,0 +1,22 @@
+<h1>Personnel pont</h1>
+  <p><%= link_to "Commandant", personnel_path('Commandant') %> | <%= Profile.where_fonction('Commandant').count %> </p>
+  <p><%= link_to "Capitaine", personnel_path('Capitaine') %> | <%= Profile.where_fonction('Capitaine').count %></p>
+  <p><%= link_to "officier pont", personnel_path('Officier pont') %> | <%= Profile.where_fonction('Officier pont').count %></p>
+  <p><%= link_to "Elève officier pont", personnel_path('Elève officier pont') %> | <%= Profile.where_fonction('Elève officier pont').count %></p>
+  <p><%= link_to "Officier radio", personnel_path('Officier radio') %> | <%= Profile.where_fonction('Officier radio').count %></p>
+  <p><%= link_to "Maitre d'équipage", personnel_path("Maitre d'équipage") %> | <%= Profile.where_fonction("Maitre d'équipage").count %></p>
+  <p><%= link_to "Maitre commercial", personnel_path("Maitre d'équipage") %> | <%= Profile.where_fonction('Maitre commercial').count %></p>
+  <p><%= link_to "Matelot", personnel_path("Matelot") %> | <%= Profile.where_fonction('Matelot').count %></p>
+<h1>Personnel machine</h1>
+  <p><%= link_to "Chef mécanicien", personnel_path("Chef mécanicien") %> | <%= Profile.where_fonction('Chef mécanicien').count %></p>
+  <p><%= link_to "Second mécanicien", personnel_path("Second mécanicien") %> | <%= Profile.where_fonction('Second mécanicien').count %></p>
+  <p><%= link_to "Officier mécanicien", personnel_path("Officier mécanicien") %> | <%= Profile.where_fonction('Officier mécanicien').count %></p>
+  <p><%= link_to "Elève officier machine", personnel_path("Elève officier machine") %> | <%= Profile.where_fonction('Elève officier machine').count %></p>
+  <p><%= link_to "Maitre électricien", personnel_path("Maire électricien") %> | <%= Profile.where_fonction('Maitre électricien').count %></p>
+  <p><%= link_to "Maitre machine", personnel_path("Maitre machine") %> | <%= Profile.where_fonction('Maitre machine').count %></p>
+  <p><%= link_to "Ouvrier mécanicien", personnel_path("Ouvrier mécanicien") %> | <%= Profile.where_fonction('Ouvrier mécanicien').count %></p>
+<h1>Personnel restaurant</h1>
+  <p><%= link_to "Cambusier", personnel_path("Cambusier") %> | <%= Profile.where_fonction('Cambusier').count %></p>
+  <p><%= link_to "Chef cuisinier", personnel_path("Chef cuisinier") %> | <%= Profile.where_fonction('Chef cuisinier').count %></p>
+  <p><%= link_to "Maitre d'hotel", personnel_path("Maitre d'hotel") %> | <%= Profile.where_fonction("Maitre d'hotel").count %></p>
+  <p><%= link_to "Garcon", personnel_path("Garcon") %> | <%= Profile.where_fonction('Garcon').count %></p>

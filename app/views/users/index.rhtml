@@ -1,0 +1,32 @@
+<h1>Liste des marins</h1>
+
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Prénoms</th>
+    <th>Email</th>
+    <th>Fonction</th>
+    <th>Brevet</th>
+    <th>Niveau scolaire</th>
+    <th>Nombre de navigations</th>
+    <th><th>
+  </tr>
+
+<% @users.each do |user| %>
+  <% if @tab_color %>
+  <tr>
+  <% else %>
+  <tr>
+  <% end %>
+    <td><%= link_to user.profile.nom, profile_path(user.profile.id) %></td>
+    <td><%= link_to user.profile.prenom, profile_path(user.profile.id) %></td>
+    <td><%= user.email %></td>
+    <td><%= user.profile.fonction %></td>
+    <td><%= user.profile.brevet %></td>
+    <td><%= user.profile.niveau_scolaire %></td>
+    <td><%= link_to user.navigations.count, index_admin_path(user.id) %></td>
+    <td><%= @tab_color %></td>
+    <% @tab_color = !@tab_color %>
+  </tr>
+<% end %>
+</table>

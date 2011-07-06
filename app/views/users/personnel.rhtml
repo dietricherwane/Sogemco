@@ -1,0 +1,33 @@
+<h1>PERSONNEL : <%=  @profiles.first.fonction %></h1>
+
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Prénoms</th>
+    <th>Email</th>
+    <th>Brevet</th>
+    <th>Niveau scolaire</th>
+    <th>Nombre de navigations</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @profiles.each do |profile| %>
+  <tr>
+    <td><%= profile.nom %></td>
+    <td><%= profile.prenom %></td>
+    <td><%= profile.user.email %></td>
+    <td><%= profile.brevet %></td>
+    <td><%= profile.niveau_scolaire %></td>
+    <td><%= link_to profile.user.navigations.count, index_admin_path(profile.user.id) %></td>
+    <td><%=  %></td>
+    <td>
+
+    </td>
+  </tr>
+<% end %>
+</table>
+<p></p>
+<div align="right">
+  <%= only_cancel %>
+</div>

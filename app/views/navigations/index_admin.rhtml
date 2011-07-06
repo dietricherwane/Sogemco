@@ -1,0 +1,36 @@
+<h1>Liste des navigations de : <%= @navigations.first.user.profile.nom+' '+@navigations.first.user.profile.prenom+' | '+@navigations.first.user.email %> </h1>
+
+<table>
+  <tr>
+    <th>Compagnie</th>
+    <th>Navire</th>
+    <th>Pavillon</th>
+    <th>Type de navire</th>
+    <th>Fonction occupée</th>
+    <th>Date d'embarquement</th>
+    <th>Date de débarquement</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @navigations.each do |navigation| %>
+  <tr>
+    <td><%= navigation.compagnie %></td>
+    <td><%= navigation.navire %></td>
+    <td><%= navigation.pavillon %></td>
+    <td><%= navigation.type_navire %></td>
+    <td><%= navigation.fonction_occupee %></td>
+    <td><%= navigation.date_embarquement %></td>
+    <td><%= navigation.date_debarquement %></td>
+    <td>
+      <% if navigation.owned_by? current_user %>
+      <span class="actions"><%= link_to 'Editer', edit_navigation_path(navigation) %></span>
+      <% end %>
+    </td>
+  </tr>
+<% end %>
+</table>
+<p></p>
+<div align="right">
+  <%= only_cancel %>
+</div>

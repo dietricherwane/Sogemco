@@ -1,0 +1,143 @@
+<%= form_for(@profile) do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "erreur") %> empêche(nt) votre profil d'être enregistré.</h2>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label 'Nom' %><br />
+    <%= f.text_field :nom %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Prénoms' %><br />
+    <%= f.text_field :prenom %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Date et lieu de naissance' %><br />
+    <%= f.text_field :date_lieu_naissance %>
+  </div>
+  <div class="field">
+    <%= f.label 'Fonction' %><br />
+    <%= select("fonction_occupee", "crew_id", Crewmanagement.all.collect {|c| [ c.fonction, c.id ] }, options ={:prompt => @selected_crew}) %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Brevet' %><br />
+    <%= f.text_field :brevet %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Nationalité' %><br />
+    <%= f.text_field :nationalite %>
+  </div>
+  <div class="field">
+    <%= f.label 'Niveau scolaire' %><br />
+    <%= f.text_field :niveau_scolaire %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Situation matrimoniale' %><br />
+    <%= f.text_field :situation_matrimoniale %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Nombre d'+"'"+'enfants' %><br />
+    <%= f.text_field :nombre_enfants %>
+  </div>
+  <div class="field">
+    <%= f.label 'Numéro de passeport' %><br />
+    <%= f.text_field :numero_passeport %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Date d'+"'"+'expiration du passeport' %><br />
+    <%= f.date_select :validite_passeport %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Numéro de livret maritime' %><br />
+    <%= f.text_field :numero_livret_maritime %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Date d'+"'"+'expiration du livret maritime' %><br />
+    <%= f.date_select :validite_livret %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Visite médicale' %><br />
+    <%= f.text_field :visite_medicale %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Date d'+"'"+'expiration de la visite médicale' %><br />
+    <%= f.date_select :validite_visite %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Numéro CNPS' %><br />
+    <%= f.text_field :numero_cnps %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Numéro CNI' %><br />
+    <%= f.text_field :numero_cni %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Numéro de téléphone' %><br />
+    <%= f.text_field :numero_telephone %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Adresse postale' %><br />
+    <%= f.text_field :adresse_postale %>
+  </div>
+  <div class="field">
+    <%= f.label 'Lieu de résidence' %><br />
+    <%= f.text_field :lieu_residence %>
+  </div>
+  <div class="field">
+    <%= f.label 'Nom et prénoms de la mère' %><br />
+    <%= f.text_field :nom_prenom_mere %>
+  </div>
+  <div class="field">
+    <%= f.label 'Date et lieu de naissance de la mère ' %><br />
+    <%= f.text_field :date_lieu_naissance_mere %>
+  </div>
+  <div class="field">
+    <%= f.label 'Nationalité de la mère' %><br />
+    <%= f.text_field :nationalite_mere %>
+  </div>
+  <div class="field">
+    <%= f.label 'Nom et prénoms du père' %><br />
+    <%= f.text_field :nom_prenom_pere %>
+  </div>
+  <div class="field">
+    <%= f.label 'Date et lieu de naissance du père ' %><br />
+    <%= f.text_field :date_lieu_naissance_pere %>
+  </div>
+  <div class="field">
+    <%= f.label 'Nationalité du père' %><br />
+    <%= f.text_field :nationalite_pere %>
+  </div>
+  <div class="field">
+    <%= f.label 'Nom et prénoms de l'+"'"+'épouse' %><br />
+    <%= f.text_field :nom_prenom_epouse %>
+  </div>
+  <div class="field">
+    <%= f.label 'Date et lieu de naissance de l'+"'"+'épouse ' %><br />
+    <%= f.text_field :date_lieu_naissance_epouse %>
+  </div>
+  <div class="field">
+    <%= f.label 'Nationalité de l'+"'"+'épouse' %><br />
+    <%= f.text_field :nationalite_epouse %>
+  </div>
+  <div class="field">
+    <%= f.label 'Nom et prénoms du correspondant' %><br />
+    <%= f.text_field :nom_prenom_correspondant %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Lien avec le travailleur' %><br />
+    <%= f.text_field :lien_avec_travailleur %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Numéro de téléphone du correspondant' %><br />
+    <%= f.text_field :numero_telephone_correspondant %>*
+  </div>
+  <div class="field">
+    <%= f.label 'Adresse postale du correspondant' %><br />
+    <%= f.text_field :adresse_postale_correspondant %>
+  </div>
+  <div class="actions">
+    <%= submit_or_cancel(f) %>
+  </div>
+<% end %>
