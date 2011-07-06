@@ -32,7 +32,7 @@ class NavigationsController < ApplicationController
 
   def new
     if new_comer?
-      redirect_to edit_profile_path(current_user), :alert => 'Veuillez compléter votre profil pour continuer.'
+      redirect_to edit_profile_path(current_user), :alert => 'Veuillez completer votre profil pour continuer.'
     else
       @navigation = Navigation.new
       @selected_crew = nil
