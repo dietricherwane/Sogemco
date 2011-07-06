@@ -51,11 +51,11 @@ class NavigationsController < ApplicationController
     
     respond_to do |format|
       if @navigation.save
-        format.html { redirect_to (navigations_path, :notice => 'Votre navigation a ete correctement enregistree.') }
-        format.xml  { render :xml => @navigation, :status => :created, :location => @navigation }
+        format.html{ redirect_to(navigations_path, :notice => 'Votre navigation a ete correctement enregistree.') }
+        format.xml{ render :xml => @navigation, :status => :created, :location => @navigation }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @navigation.errors, :status => :unprocessable_entity }
+        format.html{ render :action => "new" }
+        format.xml{ render :xml => @navigation.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -69,10 +69,10 @@ class NavigationsController < ApplicationController
         unless @fonction.nil?
           @navigation.update_attributes(:fonction_occupee => @fonction.fonction)
         end
-        format.html { redirect_to (navigations_path, :notice => 'Votre navigation a ete correctement mise a jour.') }
-        format.xml  { head :ok }
+        format.html{ redirect_to(navigations_path, :notice => 'Votre navigation a ete correctement mise a jour.') }
+        format.xml{ head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html{ render :action => "edit" }
       end
     end
   end
