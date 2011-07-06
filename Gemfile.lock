@@ -74,6 +74,7 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 0.2.0)
       xpath (~> 0.1.4)
+    cgi_multipart_eof_fix (2.5.0)
     childprocess (0.1.9)
       ffi (~> 1.0.6)
     columnize (0.3.2)
@@ -89,6 +90,7 @@ GEM
       cucumber (>= 0.10.5)
       nokogiri (>= 1.4.4)
       rack-test (>= 0.5.7)
+    daemons (1.1.3)
     database_cleaner (0.6.7)
     diff-lcs (1.1.2)
     enumerated_attribute (0.2.16)
@@ -102,7 +104,9 @@ GEM
     faker (0.9.5)
       i18n (~> 0.4)
     fakeweb (1.3.0)
+    fastthread (1.0.7)
     ffi (1.0.9)
+    gem_plugin (0.2.3)
     gherkin (2.4.0)
       json (>= 1.4.6)
     haml (3.1.2)
@@ -128,6 +132,11 @@ GEM
       treetop (~> 1.4.8)
     meta_programming (0.2.2)
     mime-types (1.16)
+    mongrel (1.1.5)
+      cgi_multipart_eof_fix (>= 2.4)
+      daemons (>= 1.0.3)
+      fastthread (>= 1.0.1)
+      gem_plugin (>= 0.2.3)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -224,6 +233,7 @@ DEPENDENCIES
   hoptoad_notifier
   jquery-rails (>= 0.2.6)
   launchy
+  mongrel
   newrelic_rpm
   nokogiri
   paperclip
