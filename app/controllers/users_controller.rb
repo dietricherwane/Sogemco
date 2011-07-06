@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update_attributes(params[:user])
-      redirect_to navigations_path, :notice => 'Votre profil a ete mis à jour.'
+      redirect_to navigations_path, :notice => 'Votre profil a ete mis a jour.'
     else
       render :action => 'edit'
     end
