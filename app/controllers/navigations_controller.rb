@@ -48,9 +48,11 @@ class NavigationsController < ApplicationController
 
   def create
     @navigation = current_user.navigations.new(params[:navigation])
-    
+    #@poste = params[:fonction_occupee][:crew_id]
+    @nom_poste = Crewmanagement.find_by_id(params[:fonction_occupee][:crew_id])
     respond_to do |format|
       if @navigation.save
+        @navigation.update_attributes(:fonction_occupee => @nom_poste.fonction)
         format.html{ redirect_to(navigations_path, :notice => 'Votre navigation a ete correctement enregistree.') }
         format.xml{ render :xml => @navigation, :status => :created, :location => @navigation }
       else
@@ -61,7 +63,6 @@ class NavigationsController < ApplicationController
   end
 
   def update
-    
     @fonction = Crewmanagement.find_by_id(params[:fonction_occupee][:crew_id])
     @navigation = current_user.navigations.find(params[:id])
     respond_to do |format|
