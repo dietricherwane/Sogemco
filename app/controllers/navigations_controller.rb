@@ -16,9 +16,10 @@ class NavigationsController < ApplicationController
 
   def index_admin
     if administrator_logged_in?
+      @tab_color = true #background color for the table
       @owner = User.find(params[:id])
       @navigations = @owner.navigations
-      if @navigations.size.eql?(0)
+      if @navigations.size.eql?(0) #to avoid bug when savage user hits 0
         redirect_to users_path
       end
     else

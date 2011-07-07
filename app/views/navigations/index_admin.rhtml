@@ -1,20 +1,24 @@
 <h1>Liste des navigations de : <%= @navigations.first.user.profile.nom+' '+@navigations.first.user.profile.prenom+' | '+@navigations.first.user.email %> </h1>
 
-<table>
+<table id="hor-zebra">
   <tr>
-    <th>Compagnie</th>
-    <th>Navire</th>
-    <th>Pavillon</th>
-    <th>Type de navire</th>
-    <th>Fonction occupée</th>
-    <th>Date d'embarquement</th>
-    <th>Date de débarquement</th>
+    <th scope="col">Compagnie</th>
+    <th scope="col">Navire</th>
+    <th scope="col">Pavillon</th>
+    <th scope="col">Type de navire</th>
+    <th scope="col">Fonction occupée</th>
+    <th scope="col">Date d'embarquement</th>
+    <th scope="col">Date de débarquement</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @navigations.each do |navigation| %>
+  <% if @tab_color %>
+  <tr class="odd">
+  <% else %>
   <tr>
+  <% end %>
     <td><%= navigation.compagnie %></td>
     <td><%= navigation.navire %></td>
     <td><%= navigation.pavillon %></td>
@@ -27,6 +31,7 @@
       <span class="actions"><%= link_to 'Editer', edit_navigation_path(navigation) %></span>
       <% end %>
     </td>
+    <% @tab_color = !@tab_color %>
   </tr>
 <% end %>
 </table>

@@ -1,21 +1,23 @@
-<h1>PERSONNEL : <%=  @profiles.first.fonction %></h1>
+<h1>PERSONNEL : <%=  @profiles.first.fonction  %> (<%= @profiles.count %>) </h1>
 
-<table>
+<table id="hor-zebra">
   <tr>
-    <th>Nom</th>
-    <th>Prénoms</th>
-    <th>Email</th>
-    <th>Brevet</th>
-    <th>Niveau scolaire</th>
-    <th>Nombre de navigations</th>
-    <th></th>
-    <th></th>
+    <th scope="col">Nom</th>
+    <th scope="col">Prénoms</th>
+    <th scope="col">Email</th>
+    <th scope="col">Brevet</th>
+    <th scope="col">Niveau scolaire</th>
+    <th scope="col">Nombre de navigations</th>
   </tr>
 
 <% @profiles.each do |profile| %>
+  <% if @tab_color %>
+  <tr class="odd">
+  <% else %>
   <tr>
-    <td><%= profile.nom %></td>
-    <td><%= profile.prenom %></td>
+  <% end %>
+    <td><%= link_to profile.nom, profile_path(profile.id) %></td>
+    <td><%= link_to profile.prenom, profile_path(profile.id) %></td>
     <td><%= profile.user.email %></td>
     <td><%= profile.brevet %></td>
     <td><%= profile.niveau_scolaire %></td>

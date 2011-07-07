@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def index
     #@users = User.all
     @users = User.find_all_by_statut('Utilisateur')
-    @tab_color = true
+    @tab_color = true #background color for the table
   end
 
   def new
@@ -45,6 +45,7 @@ class UsersController < ApplicationController
   end
 
   def personnel
+    @tab_color = true #background color for the table
     @fonction = params[:id]
     @profiles = Profile.find_all_by_fonction(@fonction)
     if @profiles.size.eql?(0)

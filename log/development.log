@@ -46673,3 +46673,2983 @@ ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
   
 
 Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Thu Jul 07 12:35:19 -0700 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 606ms
+
+
+Started GET "/login" for 127.0.0.1 at Thu Jul 07 12:35:32 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.rhtml within layouts/application (2492.1ms)
+Completed 200 OK in 2896ms (Views: 2881.4ms | ActiveRecord: 1267.6ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 12:35:36 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (26.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 12:35:37 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.4ms)
+
+
+Started POST "/session" for 127.0.0.1 at Thu Jul 07 12:35:46 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"pgYwq8oH75hmtej2Ac4Z69KmqhGAIXJkbeOsQ3rkhOQ=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"dietricherwane@yahoo.fr"}
+  [1m[35mSQL (244.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.9ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'dietricherwane@yahoo.fr' LIMIT 1
+Redirected to http://localhost:3000/navigations
+Completed 302 Found in 949ms
+
+
+Started GET "/navigations" for 127.0.0.1 at Thu Jul 07 12:35:49 -0700 2011
+  Processing by NavigationsController#index as HTML
+  [1m[36mSQL (6.2ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (19.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+  [1m[35mProfile Load (4.5ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 26) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (27.2ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 427ms
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 12:35:57 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (2.3ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.2ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'
+  [1m[36mProfile Load (1.7ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (3.7ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.3ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (29.2ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mProfile Load (1.6ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (3.2ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)
+  [1m[36mProfile Load (2.2ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/index.rhtml within layouts/application (291.3ms)
+Completed 200 OK in 408ms (Views: 292.4ms | ActiveRecord: 343.9ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 12:35:58 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (11.9ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 12:35:58 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 13:05:58 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (12.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.4ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'
+  [1m[36mProfile Load (2.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (5.0ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.9ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.6ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mProfile Load (1.8ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)
+  [1m[36mProfile Load (1.8ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/index.rhtml within layouts/application (312.9ms)
+Completed 200 OK in 444ms (Views: 318.7ms | ActiveRecord: 100.4ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:05:59 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.3ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:06:00 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 13:06:50 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (7.9ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'
+  [1m[36mProfile Load (1.9ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (5.6ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (3.0ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.3ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mProfile Load (4.8ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)
+  [1m[36mProfile Load (2.0ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (4.0ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/index.rhtml within layouts/application (544.0ms)
+Completed 200 OK in 665ms (Views: 544.5ms | ActiveRecord: 54.1ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:06:51 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:06:51 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 13:12:56 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (3.1ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (1.9ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'
+  [1m[36mProfile Load (1.6ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (3.5ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.3ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (0.9ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mProfile Load (1.3ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)
+  [1m[36mProfile Load (1.2ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/index.rhtml within layouts/application (230.3ms)
+Completed 200 OK in 313ms (Views: 234.8ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:12:56 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:12:56 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 13:14:26 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (4.5ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (6.2ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'
+  [1m[36mProfile Load (1.9ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (5.0ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (3.4ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.1ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mProfile Load (1.7ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)
+  [1m[36mProfile Load (1.9ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/index.rhtml within layouts/application (365.9ms)
+Completed 200 OK in 478ms (Views: 367.6ms | ActiveRecord: 35.8ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:14:27 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:14:27 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 13:15:09 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (3.2ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'
+  [1m[36mProfile Load (2.4ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (4.6ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (3.1ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.4ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mProfile Load (5.4ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)
+  [1m[36mProfile Load (1.7ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/index.rhtml within layouts/application (592.9ms)
+Completed 200 OK in 724ms (Views: 592.3ms | ActiveRecord: 78.6ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:15:10 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:15:11 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 13:15:38 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (3.2ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.8ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'
+  [1m[36mProfile Load (8.0ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (5.3ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (6.2ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.7ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mProfile Load (1.8ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)
+  [1m[36mProfile Load (2.0ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/index.rhtml within layouts/application (338.2ms)
+Completed 200 OK in 560ms (Views: 338.4ms | ActiveRecord: 41.9ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:15:39 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:15:39 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/index_crewmanagement" for 127.0.0.1 at Thu Jul 07 13:15:54 -0700 2011
+  Processing by UsersController#index_crewmanagement as HTML
+  [1m[35mSQL (5.3ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (174.9ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Commandant%')[0m
+  [1m[35mSQL (8.8ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Capitaine%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Officier pont%')[0m
+  [1m[35mSQL (13.3ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Elève officier pont%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Officier radio%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre d''équipage%')
+  [1m[36mSQL (1.1ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre commercial%')[0m
+  [1m[35mSQL (1.3ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Matelot%')
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Chef mécanicien%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Second mécanicien%')
+  [1m[36mSQL (1.5ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Officier mécanicien%')[0m
+  [1m[35mSQL (1.1ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Elève officier machine%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre électricien%')[0m
+  [1m[35mSQL (4.4ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre machine%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Ouvrier mécanicien%')[0m
+  [1m[35mSQL (1.1ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Cambusier%')
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Chef cuisinier%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre d''hotel%')
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Garcon%')[0m
+  [1m[35mSQL (2.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.6ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+Rendered users/index_crewmanagement.rhtml within layouts/application (581.2ms)
+Completed 200 OK in 863ms (Views: 429.6ms | ActiveRecord: 244.1ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:15:56 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.4ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:15:56 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.3ms)
+
+
+Started GET "/users/Commandant/personnel" for 127.0.0.1 at Thu Jul 07 13:16:05 -0700 2011
+  Processing by UsersController#personnel as HTML
+  Parameters: {"id"=>"Commandant"}
+  [1m[36mSQL (4.7ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (4.5ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mProfile Load (1.7ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."fonction" = 'Commandant'[0m
+  [1m[35mSQL (5.7ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mSQL (2.5ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (3.0ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.4ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/personnel.rhtml within layouts/application (603.1ms)
+Completed 200 OK in 714ms (Views: 626.9ms | ActiveRecord: 28.9ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:16:06 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (13.1ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:16:06 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.3ms)
+
+
+Started GET "/users/Commandant/personnel" for 127.0.0.1 at Thu Jul 07 13:18:36 -0700 2011
+  Processing by UsersController#personnel as HTML
+  Parameters: {"id"=>"Commandant"}
+  [1m[35mSQL (6.1ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (6.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mProfile Load (1.8ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."fonction" = 'Commandant'
+Rendered users/personnel.rhtml within layouts/application (99.6ms)
+Completed 500 Internal Server Error in 199ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.count):
+    1: <h1>PERSONNEL : <%=  @profiles.first.fonction+ '('+@profile.count+')' %></h1>
+    2: 
+    3: <table>
+    4:   <tr>
+  app/views/users/personnel.rhtml:1:in `_app_views_users_personnel_rhtml__38235701__622443098_0'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (67.5ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (97.9ms)
+
+
+Started GET "/users/Commandant/personnel" for 127.0.0.1 at Thu Jul 07 13:19:00 -0700 2011
+  Processing by UsersController#personnel as HTML
+  Parameters: {"id"=>"Commandant"}
+  [1m[36mSQL (4.1ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (3.5ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mProfile Load (1.3ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."fonction" = 'Commandant'[0m
+Rendered users/personnel.rhtml within layouts/application (73.0ms)
+Completed 500 Internal Server Error in 147ms
+
+ActionView::Template::Error (can't convert Fixnum into String):
+    1: <h1>PERSONNEL : <%=  @profiles.first.fonction+ '('+@profiles.count+')' %></h1>
+    2: 
+    3: <table>
+    4:   <tr>
+  app/views/users/personnel.rhtml:1:in `+'
+  app/views/users/personnel.rhtml:1:in `_app_views_users_personnel_rhtml__38235701__624147048_0'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (246.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (265.5ms)
+
+
+Started GET "/users/Commandant/personnel" for 127.0.0.1 at Thu Jul 07 13:20:18 -0700 2011
+  Processing by UsersController#personnel as HTML
+  Parameters: {"id"=>"Commandant"}
+  [1m[35mSQL (16.1ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (5.0ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mProfile Load (1.6ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."fonction" = 'Commandant'
+ERROR: compiling _app_views_users_personnel_rhtml__38235701__622162798_0 RAISED compile error
+/home/lalala/Desktop/rails_projects/Sogemco/app/views/users/personnel.rhtml:1: syntax error, unexpected ')'
+...  @profiles.first.fonction+  );@output_buffer.safe_concat(' ...
+                              ^
+/home/lalala/Desktop/rails_projects/Sogemco/app/views/users/personnel.rhtml:34: syntax error, unexpected kENSURE, expecting ')'
+/home/lalala/Desktop/rails_projects/Sogemco/app/views/users/personnel.rhtml:36: syntax error, unexpected kEND, expecting ')'
+Function body:           def _app_views_users_personnel_rhtml__38235701__622162798_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "users/personnel";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>PERSONNEL : ');@output_buffer.append= (  @profiles.first.fonction+  );@output_buffer.safe_concat(' (');@output_buffer.append= ( @profiles.count );@output_buffer.safe_concat(') </h1>
+
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Prénoms</th>
+    <th>Email</th>
+    <th>Brevet</th>
+    <th>Niveau scolaire</th>
+    <th>Nombre de navigations</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+');@output_buffer.append_if_string=  @profiles.each do |profile| 
+@output_buffer.safe_concat('  <tr>
+    <td>');@output_buffer.append= ( profile.nom );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( profile.prenom );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( profile.user.email );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( profile.brevet );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( profile.niveau_scolaire );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( link_to profile.user.navigations.count, index_admin_path(profile.user.id) );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= (  );@output_buffer.safe_concat('</td>
+    <td>
+
+    </td>
+  </tr>
+'); end 
+@output_buffer.safe_concat('</table>
+<p></p>
+<div align="right">
+  ');@output_buffer.append= ( only_cancel );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</div>');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/lalala/Desktop/rails_projects/Sogemco/app/views/users/personnel.rhtml:36:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_view/template.rb:134:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/notifications.rb:54:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_view/template.rb:127:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:59:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:26:in `render_without_haml'
+/usr/lib/ruby/gems/1.8/gems/haml-3.1.2/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:93:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.9/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:441:in `_run__434435962__process_action__733544990__callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:410:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:94:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/base.rb:119:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:41:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal.rb:138:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal.rb:178:in `action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/usr/lib/ruby/gems/1.8/gems/hoptoad_notifier-2.4.11/lib/hoptoad_notifier/rack.rb:27:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:32:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.9/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:12:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/rack/logger.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/lib/ruby/gems/1.8/gems/hoptoad_notifier-2.4.11/lib/hoptoad_notifier/user_informer.rb:12:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/application.rb:168:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/application.rb:77:in `send'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/application.rb:77:in `method_missing'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/handler/webrick.rb:13:in `run'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/commands/server.rb:65:in `start'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/commands.rb:30
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/commands.rb:27:in `tap'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered users/personnel.rhtml within layouts/application (38.8ms)
+Completed 500 Internal Server Error in 143ms
+
+ActionView::Template::Error (compile error
+/home/lalala/Desktop/rails_projects/Sogemco/app/views/users/personnel.rhtml:1: syntax error, unexpected ')'
+...  @profiles.first.fonction+  );@output_buffer.safe_concat(' ...
+                              ^
+/home/lalala/Desktop/rails_projects/Sogemco/app/views/users/personnel.rhtml:34: syntax error, unexpected kENSURE, expecting ')'
+/home/lalala/Desktop/rails_projects/Sogemco/app/views/users/personnel.rhtml:36: syntax error, unexpected kEND, expecting ')'):
+    1: <h1>PERSONNEL : <%=  @profiles.first.fonction+  %> (<%= @profiles.count %>) </h1>
+    2: 
+    3: <table>
+    4:   <tr>
+  app/views/users/personnel.rhtml:36:in `compile'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (188.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (212.7ms)
+
+
+Started GET "/users/Commandant/personnel" for 127.0.0.1 at Thu Jul 07 13:20:43 -0700 2011
+  Processing by UsersController#personnel as HTML
+  Parameters: {"id"=>"Commandant"}
+  [1m[36mSQL (7.1ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (4.7ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mProfile Load (1.8ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."fonction" = 'Commandant'[0m
+ERROR: compiling _app_views_users_personnel_rhtml__38235701__623691378_0 RAISED compile error
+/home/lalala/Desktop/rails_projects/Sogemco/app/views/users/personnel.rhtml:1: syntax error, unexpected ')'
+...  @profiles.first.fonction+  );@output_buffer.safe_concat(' ...
+                              ^
+/home/lalala/Desktop/rails_projects/Sogemco/app/views/users/personnel.rhtml:34: syntax error, unexpected kENSURE, expecting ')'
+/home/lalala/Desktop/rails_projects/Sogemco/app/views/users/personnel.rhtml:36: syntax error, unexpected kEND, expecting ')'
+Function body:           def _app_views_users_personnel_rhtml__38235701__623691378_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "users/personnel";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>PERSONNEL : ');@output_buffer.append= (  @profiles.first.fonction+  );@output_buffer.safe_concat(' ');@output_buffer.append= ( @profiles.count );@output_buffer.safe_concat(' </h1>
+
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Prénoms</th>
+    <th>Email</th>
+    <th>Brevet</th>
+    <th>Niveau scolaire</th>
+    <th>Nombre de navigations</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+');@output_buffer.append_if_string=  @profiles.each do |profile| 
+@output_buffer.safe_concat('  <tr>
+    <td>');@output_buffer.append= ( profile.nom );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( profile.prenom );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( profile.user.email );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( profile.brevet );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( profile.niveau_scolaire );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( link_to profile.user.navigations.count, index_admin_path(profile.user.id) );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= (  );@output_buffer.safe_concat('</td>
+    <td>
+
+    </td>
+  </tr>
+'); end 
+@output_buffer.safe_concat('</table>
+<p></p>
+<div align="right">
+  ');@output_buffer.append= ( only_cancel );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</div>');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/lalala/Desktop/rails_projects/Sogemco/app/views/users/personnel.rhtml:36:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_view/template.rb:134:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/notifications.rb:54:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_view/template.rb:127:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:59:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:26:in `render_without_haml'
+/usr/lib/ruby/gems/1.8/gems/haml-3.1.2/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:93:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.9/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:441:in `_run__434435962__process_action__733544990__callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:410:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:94:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/base.rb:119:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:41:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal.rb:138:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_controller/metal.rb:178:in `action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/usr/lib/ruby/gems/1.8/gems/hoptoad_notifier-2.4.11/lib/hoptoad_notifier/rack.rb:27:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:32:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.9/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:12:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/rack/logger.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/lib/ruby/gems/1.8/gems/hoptoad_notifier-2.4.11/lib/hoptoad_notifier/user_informer.rb:12:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/application.rb:168:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/application.rb:77:in `send'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/application.rb:77:in `method_missing'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/handler/webrick.rb:13:in `run'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/commands/server.rb:65:in `start'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/commands.rb:30
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/commands.rb:27:in `tap'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.9/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered users/personnel.rhtml within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 116ms
+
+ActionView::Template::Error (compile error
+/home/lalala/Desktop/rails_projects/Sogemco/app/views/users/personnel.rhtml:1: syntax error, unexpected ')'
+...  @profiles.first.fonction+  );@output_buffer.safe_concat(' ...
+                              ^
+/home/lalala/Desktop/rails_projects/Sogemco/app/views/users/personnel.rhtml:34: syntax error, unexpected kENSURE, expecting ')'
+/home/lalala/Desktop/rails_projects/Sogemco/app/views/users/personnel.rhtml:36: syntax error, unexpected kEND, expecting ')'):
+    1: <h1>PERSONNEL : <%=  @profiles.first.fonction+  %> <%= @profiles.count %> </h1>
+    2: 
+    3: <table>
+    4:   <tr>
+  app/views/users/personnel.rhtml:36:in `compile'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (26.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (148.6ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (416.9ms)
+
+
+Started GET "/users/Commandant/personnel" for 127.0.0.1 at Thu Jul 07 13:21:07 -0700 2011
+  Processing by UsersController#personnel as HTML
+  Parameters: {"id"=>"Commandant"}
+  [1m[35mSQL (6.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (4.9ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mProfile Load (1.5ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."fonction" = 'Commandant'
+  [1m[36mSQL (2.7ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+  [1m[36mSQL (5.7ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (3.2ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (4.7ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+Rendered users/personnel.rhtml within layouts/application (287.8ms)
+Completed 200 OK in 390ms (Views: 297.5ms | ActiveRecord: 52.7ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:21:08 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (16.8ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:21:08 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/users/Commandant/personnel" for 127.0.0.1 at Thu Jul 07 13:21:28 -0700 2011
+  Processing by UsersController#personnel as HTML
+  Parameters: {"id"=>"Commandant"}
+  [1m[36mSQL (4.8ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (4.6ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mProfile Load (1.7ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."fonction" = 'Commandant'[0m
+  [1m[35mSQL (3.0ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mSQL (2.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.8ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.7ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/personnel.rhtml within layouts/application (534.1ms)
+Completed 200 OK in 621ms (Views: 542.8ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:21:29 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:21:30 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/users/Commandant/personnel" for 127.0.0.1 at Thu Jul 07 13:24:25 -0700 2011
+  Processing by UsersController#personnel as HTML
+  Parameters: {"id"=>"Commandant"}
+  [1m[35mSQL (5.7ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (4.9ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mProfile Load (1.6ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."fonction" = 'Commandant'
+  [1m[36mSQL (2.6ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+  [1m[36mSQL (2.4ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.9ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (4.8ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+Rendered users/personnel.rhtml within layouts/application (310.5ms)
+Completed 200 OK in 408ms (Views: 319.8ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:24:26 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.2ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:24:26 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/users/Commandant/personnel" for 127.0.0.1 at Thu Jul 07 13:25:07 -0700 2011
+  Processing by UsersController#personnel as HTML
+  Parameters: {"id"=>"Commandant"}
+  [1m[36mSQL (5.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (5.1ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mProfile Load (1.8ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."fonction" = 'Commandant'[0m
+  [1m[35mSQL (2.6ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mSQL (2.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (3.0ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mUser Load (3.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/personnel.rhtml within layouts/application (313.1ms)
+Completed 200 OK in 416ms (Views: 330.3ms | ActiveRecord: 50.6ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:25:08 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.1ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:25:08 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/navigations/6/index_admin" for 127.0.0.1 at Thu Jul 07 13:25:35 -0700 2011
+  Processing by NavigationsController#index_admin as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mSQL (3.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.3ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (9.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mSQL (3.1ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)[0m
+  [1m[35mNavigation Load (1.8ms)[0m  SELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mProfile Load (2.4ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (4.7ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+  [1m[36mNavigation Load (1.5ms)[0m  [1mSELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC[0m
+  [1m[35mProfile Load (1.4ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 26) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+Rendered navigations/index_admin.rhtml within layouts/application (448.0ms)
+Completed 200 OK in 674ms (Views: 503.1ms | ActiveRecord: 36.5ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:25:36 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:25:36 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+
+
+Started GET "/navigations/6/index_admin" for 127.0.0.1 at Thu Jul 07 13:27:52 -0700 2011
+  Processing by NavigationsController#index_admin as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mSQL (3.7ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mSQL (2.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (4.7ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)[0m
+  [1m[35mNavigation Load (1.6ms)[0m  SELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mProfile Load (1.8ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (4.7ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+  [1m[36mNavigation Load (1.5ms)[0m  [1mSELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC[0m
+  [1m[35mProfile Load (2.0ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 26) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+Rendered navigations/index_admin.rhtml within layouts/application (291.3ms)
+Completed 200 OK in 528ms (Views: 306.4ms | ActiveRecord: 36.5ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:27:53 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:27:53 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:27:54 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/navigations/6/index_admin" for 127.0.0.1 at Thu Jul 07 13:29:54 -0700 2011
+  Processing by NavigationsController#index_admin as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mSQL (3.5ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.9ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mSQL (2.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)[0m
+  [1m[35mNavigation Load (1.5ms)[0m  SELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mProfile Load (2.3ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (4.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+  [1m[36mNavigation Load (1.5ms)[0m  [1mSELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC[0m
+  [1m[35mProfile Load (1.7ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 26) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+Rendered navigations/index_admin.rhtml within layouts/application (298.3ms)
+Completed 200 OK in 514ms (Views: 311.4ms | ActiveRecord: 69.2ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:29:55 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:29:55 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/navigations/6/index_admin" for 127.0.0.1 at Thu Jul 07 13:30:55 -0700 2011
+  Processing by NavigationsController#index_admin as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mSQL (2.5ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (6.8ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mSQL (2.7ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (4.1ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)[0m
+  [1m[35mNavigation Load (1.5ms)[0m  SELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mProfile Load (1.8ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (6.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+  [1m[36mNavigation Load (1.5ms)[0m  [1mSELECT "navigations".* FROM "navigations" WHERE ("navigations".user_id = 6) ORDER BY date_debarquement DESC[0m
+  [1m[35mProfile Load (2.0ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 26) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+Rendered navigations/index_admin.rhtml within layouts/application (511.1ms)
+Completed 200 OK in 699ms (Views: 519.4ms | ActiveRecord: 33.8ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:30:56 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.5ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:30:57 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 13:31:41 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (3.0ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (4.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'
+  [1m[36mProfile Load (1.7ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (4.6ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (3.1ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mProfile Load (2.0ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (1.5ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)
+  [1m[36mProfile Load (11.7ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/index.rhtml within layouts/application (307.2ms)
+Completed 200 OK in 432ms (Views: 300.2ms | ActiveRecord: 53.4ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:31:42 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (14.1ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:31:42 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 13:32:27 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (2.1ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.0ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (6.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'
+  [1m[36mProfile Load (1.8ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (5.9ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.3ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (0.8ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mProfile Load (1.5ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)
+  [1m[36mProfile Load (1.3ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/index.rhtml within layouts/application (221.8ms)
+Completed 200 OK in 301ms (Views: 220.5ms | ActiveRecord: 28.9ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:32:28 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:32:28 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/index_crewmanagement" for 127.0.0.1 at Thu Jul 07 13:32:37 -0700 2011
+  Processing by UsersController#index_crewmanagement as HTML
+  [1m[35mSQL (5.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Commandant%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Capitaine%')
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Officier pont%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Elève officier pont%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Officier radio%')[0m
+  [1m[35mSQL (4.3ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre d''équipage%')
+  [1m[36mSQL (2.1ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre commercial%')[0m
+  [1m[35mSQL (1.5ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Matelot%')
+  [1m[36mSQL (1.9ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Chef mécanicien%')[0m
+  [1m[35mSQL (1.3ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Second mécanicien%')
+  [1m[36mSQL (7.5ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Officier mécanicien%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Elève officier machine%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre électricien%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre machine%')
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Ouvrier mécanicien%')[0m
+  [1m[35mSQL (1.1ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Cambusier%')
+  [1m[36mSQL (1.4ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Chef cuisinier%')[0m
+  [1m[35mSQL (1.3ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre d''hotel%')
+  [1m[36mSQL (1.4ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Garcon%')[0m
+  [1m[35mSQL (2.6ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.3ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+Rendered users/index_crewmanagement.rhtml within layouts/application (989.0ms)
+Completed 200 OK in 1013ms (Views: 964.8ms | ActiveRecord: 49.5ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:32:39 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:32:39 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.1ms)
+
+
+Started GET "/users/Commandant/personnel" for 127.0.0.1 at Thu Jul 07 13:32:42 -0700 2011
+  Processing by UsersController#personnel as HTML
+  Parameters: {"id"=>"Commandant"}
+  [1m[36mSQL (4.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (4.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mProfile Load (1.6ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."fonction" = 'Commandant'[0m
+  [1m[35mSQL (2.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mSQL (2.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (3.0ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/personnel.rhtml within layouts/application (284.1ms)
+Completed 200 OK in 367ms (Views: 292.0ms | ActiveRecord: 25.6ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:32:43 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.5ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:32:43 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 13:32:55 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (3.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.3ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'
+  [1m[36mProfile Load (1.9ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (5.0ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (3.1ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (4.4ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mProfile Load (2.4ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)
+  [1m[36mProfile Load (2.2ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/index.rhtml within layouts/application (312.9ms)
+Completed 200 OK in 673ms (Views: 327.2ms | ActiveRecord: 36.2ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:32:56 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.9ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:32:56 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.6ms)
+
+
+Started GET "/index_crewmanagement" for 127.0.0.1 at Thu Jul 07 13:33:02 -0700 2011
+  Processing by UsersController#index_crewmanagement as HTML
+  [1m[35mSQL (4.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Commandant%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Capitaine%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Officier pont%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Elève officier pont%')
+  [1m[36mSQL (4.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Officier radio%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre d''équipage%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre commercial%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Matelot%')
+  [1m[36mSQL (4.6ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Chef mécanicien%')[0m
+  [1m[35mSQL (1.1ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Second mécanicien%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Officier mécanicien%')[0m
+  [1m[35mSQL (1.3ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Elève officier machine%')
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre électricien%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre machine%')
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Ouvrier mécanicien%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Cambusier%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Chef cuisinier%')[0m
+  [1m[35mSQL (4.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre d''hotel%')
+  [1m[36mSQL (1.5ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Garcon%')[0m
+  [1m[35mSQL (2.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.4ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+Rendered users/index_crewmanagement.rhtml within layouts/application (353.4ms)
+Completed 200 OK in 380ms (Views: 334.5ms | ActiveRecord: 46.5ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:33:03 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.4ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:33:03 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (7.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 13:33:05 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (2.7ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.6ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'[0m
+  [1m[35mProfile Load (2.0ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (4.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.9ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (4.6ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)[0m
+  [1m[35mProfile Load (1.8ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)[0m
+  [1m[35mProfile Load (1.9ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+Rendered users/index.rhtml within layouts/application (302.1ms)
+Completed 200 OK in 410ms (Views: 307.8ms | ActiveRecord: 72.7ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:33:06 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:33:06 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/index_crewmanagement" for 127.0.0.1 at Thu Jul 07 13:33:08 -0700 2011
+  Processing by UsersController#index_crewmanagement as HTML
+  [1m[36mSQL (4.6ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.5ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Commandant%')
+  [1m[36mSQL (1.5ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Capitaine%')[0m
+  [1m[35mSQL (1.4ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Officier pont%')
+  [1m[36mSQL (1.1ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Elève officier pont%')[0m
+  [1m[35mSQL (4.8ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Officier radio%')
+  [1m[36mSQL (1.4ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre d''équipage%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre commercial%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Matelot%')[0m
+  [1m[35mSQL (4.9ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Chef mécanicien%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Second mécanicien%')[0m
+  [1m[35mSQL (1.1ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Officier mécanicien%')
+  [1m[36mSQL (1.8ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Elève officier machine%')[0m
+  [1m[35mSQL (1.3ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre électricien%')
+  [1m[36mSQL (8.8ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre machine%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Ouvrier mécanicien%')
+  [1m[36mSQL (1.4ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Cambusier%')[0m
+  [1m[35mSQL (1.1ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Chef cuisinier%')
+  [1m[36mSQL (1.5ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre d''hotel%')[0m
+  [1m[35mSQL (3.9ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Garcon%')
+  [1m[36mSQL (2.4ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.7ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/index_crewmanagement.rhtml within layouts/application (558.9ms)
+Completed 200 OK in 582ms (Views: 527.3ms | ActiveRecord: 122.2ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:33:09 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:33:09 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/users/Commandant/personnel" for 127.0.0.1 at Thu Jul 07 13:33:11 -0700 2011
+  Processing by UsersController#personnel as HTML
+  Parameters: {"id"=>"Commandant"}
+  [1m[35mSQL (4.7ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (4.4ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mProfile Load (17.2ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."fonction" = 'Commandant'
+  [1m[36mSQL (3.0ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+  [1m[36mSQL (5.3ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.9ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (1.1ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)[0m
+  [1m[35mUser Load (4.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+Rendered users/personnel.rhtml within layouts/application (317.9ms)
+Completed 200 OK in 477ms (Views: 335.0ms | ActiveRecord: 48.0ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:33:12 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (26.8ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:33:12 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (13.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 13:33:18 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (12.6ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (3.0ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (18.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'[0m
+  [1m[35mProfile Load (1.9ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (4.6ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)[0m
+  [1m[35mProfile Load (3.8ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)[0m
+  [1m[35mProfile Load (1.7ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+Rendered users/index.rhtml within layouts/application (420.3ms)
+Completed 200 OK in 661ms (Views: 461.2ms | ActiveRecord: 107.8ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:33:19 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:33:19 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (18.1ms)
+
+
+Started GET "/users/Commandant/personnel" for 127.0.0.1 at Thu Jul 07 13:38:16 -0700 2011
+  Processing by UsersController#personnel as HTML
+  Parameters: {"id"=>"Commandant"}
+  [1m[36mSQL (10.0ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (5.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mProfile Load (1.7ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."fonction" = 'Commandant'[0m
+  [1m[35mSQL (3.3ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mSQL (2.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (3.0ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (3.5ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/personnel.rhtml within layouts/application (711.8ms)
+Completed 200 OK in 820ms (Views: 728.1ms | ActiveRecord: 61.6ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:38:17 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (9.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:38:17 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.2ms)
+
+
+Started GET "/profiles/2" for 127.0.0.1 at Thu Jul 07 13:38:20 -0700 2011
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSQL (2.5ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.8ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+  [1m[36mSQL (4.9ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mProfile Load (43.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 2 LIMIT 1
+  [1m[36mSQL (4.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (3.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1
+Rendered profiles/show.rhtml within layouts/application (176.3ms)
+Completed 200 OK in 392ms (Views: 213.7ms | ActiveRecord: 64.9ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:38:21 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.2ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:38:21 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/users/Commandant/personnel" for 127.0.0.1 at Thu Jul 07 13:38:55 -0700 2011
+  Processing by UsersController#personnel as HTML
+  Parameters: {"id"=>"Commandant"}
+  [1m[36mSQL (4.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (4.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mProfile Load (4.3ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."fonction" = 'Commandant'[0m
+  [1m[35mSQL (2.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  [1m[35mSQL (5.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (3.0ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (6.2ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/personnel.rhtml within layouts/application (699.1ms)
+Completed 200 OK in 785ms (Views: 700.5ms | ActiveRecord: 34.8ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:38:56 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:38:57 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/users/Capitaine/personnel" for 127.0.0.1 at Thu Jul 07 13:39:01 -0700 2011
+  Processing by UsersController#personnel as HTML
+  Parameters: {"id"=>"Capitaine"}
+  [1m[35mSQL (4.9ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (4.8ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mProfile Load (1.5ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."fonction" = 'Capitaine'
+Redirected to http://localhost:3000/index_crewmanagement
+Completed 302 Found in 74ms
+
+
+Started GET "/index_crewmanagement" for 127.0.0.1 at Thu Jul 07 13:39:01 -0700 2011
+  Processing by UsersController#index_crewmanagement as HTML
+  [1m[36mSQL (4.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.6ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Commandant%')
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Capitaine%')[0m
+  [1m[35mSQL (1.3ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Officier pont%')
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Elève officier pont%')[0m
+  [1m[35mSQL (1.5ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Officier radio%')
+  [1m[36mSQL (1.4ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre d''équipage%')[0m
+  [1m[35mSQL (4.6ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre commercial%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Matelot%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Chef mécanicien%')
+  [1m[36mSQL (4.8ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Second mécanicien%')[0m
+  [1m[35mSQL (1.3ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Officier mécanicien%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Elève officier machine%')[0m
+  [1m[35mSQL (1.4ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre électricien%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre machine%')[0m
+  [1m[35mSQL (1.2ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Ouvrier mécanicien%')
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Cambusier%')[0m
+  [1m[35mSQL (1.1ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Chef cuisinier%')
+  [1m[36mSQL (1.1ms)[0m  [1mSELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Maitre d''hotel%')[0m
+  [1m[35mSQL (1.6ms)[0m  SELECT COUNT(*) FROM "profiles" WHERE (fonction LIKE '%Garcon%')
+  [1m[36mSQL (2.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/index_crewmanagement.rhtml within layouts/application (589.5ms)
+Completed 200 OK in 616ms (Views: 571.5ms | ActiveRecord: 68.4ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:39:02 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.3ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:39:03 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 13:39:06 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mSQL (5.9ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.3ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'
+  [1m[36mProfile Load (1.8ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (4.5ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (3.2ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (1.4ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)
+  [1m[36mProfile Load (8.0ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (22.4ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)
+  [1m[36mProfile Load (2.4ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (1.6ms)[0m  SELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)
+  [1m[36mUser Load (12.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1[0m
+Rendered users/index.rhtml within layouts/application (419.4ms)
+Completed 200 OK in 539ms (Views: 390.9ms | ActiveRecord: 101.1ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:39:06 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:39:07 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 07 13:41:48 -0700 2011
+  Processing by SessionsController#new as HTML
+  [1m[35mSQL (2.9ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+Rendered sessions/new.rhtml within layouts/application (364.1ms)
+Completed 200 OK in 388ms (Views: 379.1ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:41:49 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.2ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:41:49 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started POST "/session" for 127.0.0.1 at Thu Jul 07 13:41:59 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"pgYwq8oH75hmtej2Ac4Z69KmqhGAIXJkbeOsQ3rkhOQ=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"dietricherwane@yahoo.fr"}
+  [1m[36mSQL (2.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (8.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'dietricherwane@yahoo.fr' LIMIT 1[0m
+Redirected to http://localhost:3000/navigations
+Completed 302 Found in 129ms
+
+
+Started GET "/navigations" for 127.0.0.1 at Thu Jul 07 13:42:00 -0700 2011
+  Processing by NavigationsController#index as HTML
+  [1m[35mSQL (2.6ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (2.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+  [1m[36mProfile Load (2.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 26) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (4.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Redirected to http://localhost:3000/users
+Completed 302 Found in 240ms
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 13:42:00 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (2.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.9ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'[0m
+  [1m[35mProfile Load (2.0ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (4.7ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (3.0ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)[0m
+  [1m[35mProfile Load (2.5ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)[0m
+  [1m[35mProfile Load (1.7ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+Rendered users/index.rhtml within layouts/application (525.5ms)
+Completed 200 OK in 636ms (Views: 536.4ms | ActiveRecord: 49.0ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 13:42:01 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 13:42:01 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from /home/lalala/Desktop/rails_projects/Sogemco/config/environment.rb:5)
+New Relic Agent not running.
+DEPRECATION WARNING: RAILS_DEFAULT_LOGGER is deprecated. Please use ::Rails.logger. (called from /home/lalala/Desktop/rails_projects/Sogemco/config/environment.rb:5)
+New Relic Agent not running.
+New Relic Agent not running.
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 07 14:15:28 -0700 2011
+  [1m[36mSQL (58.3ms)[0m  [1mSHOW client_min_messages[0m
+  [1m[35mSQL (0.8ms)[0m  SET client_min_messages TO 'panic'
+  [1m[36mSQL (0.9ms)[0m  [1mSET standard_conforming_strings = on[0m
+  [1m[35mSQL (2.8ms)[0m  SET client_min_messages TO 'notice'
+  [1m[36mSQL (165.2ms)[0m  [1mSET time zone 'UTC'[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TIME ZONE
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.rhtml within layouts/application (3504.2ms)
+Completed 200 OK in 3534ms (Views: 1150.7ms | ActiveRecord: 2611.0ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 14:15:34 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (275.9ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 14:15:35 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/logo.png" for 127.0.0.1 at Thu Jul 07 14:15:35 -0700 2011
+
+ActionController::RoutingError (No route matches "/logo.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 07 14:17:17 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.rhtml within layouts/application (188.2ms)
+Completed 200 OK in 218ms (Views: 216.4ms | ActiveRecord: 79.9ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 14:17:19 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 14:17:20 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 07 14:18:28 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.rhtml within layouts/application (291.7ms)
+Completed 200 OK in 352ms (Views: 349.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 14:18:29 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.3ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 14:18:29 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 07 14:18:41 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.rhtml within layouts/application (109.7ms)
+Completed 200 OK in 132ms (Views: 130.6ms | ActiveRecord: 43.1ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 14:18:42 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 14:18:42 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 07 14:18:54 -0700 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.rhtml within layouts/application (83.1ms)
+Completed 200 OK in 111ms (Views: 109.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 14:18:54 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 14:18:54 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started POST "/session" for 127.0.0.1 at Thu Jul 07 14:19:05 -0700 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"T31nSrVUSWqFpJ9xTtFa24YlZsh5sV/3WRgHKlclRN0=", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"dietricherwane@yahoo.fr"}
+  [1m[36mSQL (45.6ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (6.7ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (32.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'dietricherwane@yahoo.fr' LIMIT 1[0m
+Redirected to http://localhost:3000/navigations
+Completed 302 Found in 685ms
+
+
+Started GET "/navigations" for 127.0.0.1 at Thu Jul 07 14:19:06 -0700 2011
+  Processing by NavigationsController#index as HTML
+  [1m[35mSQL (2.5ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (4.8ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mUser Load (20.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+  [1m[36mProfile Load (14.0ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 26) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1[0m
+  [1m[35mSQL (4.7ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+Redirected to http://localhost:3000/users
+Completed 302 Found in 282ms
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 14:19:06 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (2.6ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (6.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'[0m
+  [1m[35mProfile Load (1.9ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (7.5ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (3.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (148.6ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)[0m
+  [1m[35mProfile Load (2.0ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)[0m
+  [1m[35mProfile Load (1.7ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+Rendered users/index.rhtml within layouts/application (447.9ms)
+Completed 200 OK in 562ms (Views: 313.7ms | ActiveRecord: 193.4ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 14:19:07 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 14:19:07 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 14:19:59 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (2.4ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.3ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'[0m
+  [1m[35mProfile Load (1.9ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (5.0ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (1.1ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)[0m
+  [1m[35mProfile Load (1.7ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)[0m
+  [1m[35mProfile Load (1.8ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+Rendered users/index.rhtml within layouts/application (280.9ms)
+Completed 200 OK in 376ms (Views: 282.8ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 14:20:00 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.3ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 14:20:00 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 14:21:47 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (3.7ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.5ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'[0m
+  [1m[35mProfile Load (2.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (4.9ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.8ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (1.6ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)[0m
+  [1m[35mProfile Load (1.7ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)[0m
+  [1m[35mProfile Load (2.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)[0m
+  [1m[35mUser Load (5.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+Rendered users/index.rhtml within layouts/application (296.4ms)
+Completed 200 OK in 614ms (Views: 508.7ms | ActiveRecord: 33.8ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 14:21:48 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 14:21:48 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Thu Jul 07 14:22:05 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (2.6ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.4ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"users"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."statut" = 'Utilisateur'[0m
+  [1m[35mProfile Load (2.0ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 6) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (4.7ms)[0m  [1m SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"profiles"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+  [1m[35mSQL (2.7ms)[0m   SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"navigations"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 6)[0m
+  [1m[35mProfile Load (1.6ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 22) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (4.1ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 22)[0m
+  [1m[35mProfile Load (1.7ms)[0m  SELECT "profiles".* FROM "profiles" WHERE ("profiles".user_id = 23) ORDER BY fonction ASC, nom ASC, prenom ASC LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mSELECT COUNT(*) FROM "navigations" WHERE ("navigations".user_id = 23)[0m
+  [1m[35mUser Load (4.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 26 LIMIT 1
+Rendered users/index.rhtml within layouts/application (269.2ms)
+Completed 200 OK in 373ms (Views: 268.5ms | ActiveRecord: 31.8ms)
+
+
+Started GET "/javascripts/jquery.js" for 127.0.0.1 at Thu Jul 07 14:22:06 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.2ms)
+
+
+Started GET "/javascripts/jquery_ujs.js" for 127.0.0.1 at Thu Jul 07 14:22:06 -0700 2011
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ujs.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
