@@ -3,6 +3,7 @@ class NavigationsController < ApplicationController
   before_filter :authenticate, :except => [:index, :show]
 
   def index
+    @tab_color = true #background color for the table
     if new_comer?
       redirect_to edit_profile_path(current_user)
     else

@@ -52,6 +52,7 @@ a:hover {
 }
 
 #header #user_bar {
+  position: static;
   float: right;
   font-size: 10px;
   padding-top: 48px;

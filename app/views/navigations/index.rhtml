@@ -13,7 +13,11 @@
   </tr>
 
 <% @navigations.each do |navigation| %>
+  <% if @tab_color %>
+  <tr class="odd">
+  <% else %>
   <tr>
+  <% end %>
     <td><%= navigation.compagnie %></td>
     <td><%= navigation.navire %></td>
     <td><%= navigation.pavillon %></td>
@@ -26,6 +30,7 @@
       <span class="actions"><%= link_to 'Editer', edit_navigation_path(navigation) %></span>
       <% end %>
     </td>
+    <% @tab_color = !@tab_color %>
   </tr>
 <% end %>
 </table>
